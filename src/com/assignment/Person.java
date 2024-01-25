@@ -1,5 +1,5 @@
 package com.assignment;
-public class Person implements Comparable<Person> {
+public abstract class Person implements Comparable<Person> {
     private static int id_gen=1;
     private int id;
     private String name;
@@ -35,9 +35,7 @@ public class Person implements Comparable<Person> {
         this.surname = surname;
     }
 
-    public String getPosition(){
-        return "Student";
-    }
+    public abstract String getPosition();
 
     @Override
     public String toString() {
