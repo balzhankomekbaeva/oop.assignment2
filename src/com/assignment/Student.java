@@ -2,7 +2,7 @@ package com.assignment;
 public class Student extends Person{
     double gpa;
 
-    //constructor no-arg
+    //constructor
     public Student() {
         super();
     }

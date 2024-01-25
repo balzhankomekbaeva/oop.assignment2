@@ -5,7 +5,7 @@ public abstract class Person implements Comparable<Person> {
     private String name;
     private String surname;
 
-    //constructor no-arg
+    //constructor
     public Person(){
         id=id_gen++;
     }
