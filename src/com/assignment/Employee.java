@@ -3,15 +3,19 @@ public class Employee extends Person {
     private String position;
     private double salary;
 
+    //constructor no-arg
     public Employee(){
         super();
     }
+
+    //constructor 4 parameter
     public Employee(String name,String surname, String position, double salary){
         super(name, surname);
         this.position=position;
         this.salary=salary;
     }
 
+    //getter and setter
     @Override
     public String getPosition() {
         return position;
@@ -30,6 +34,7 @@ public class Employee extends Person {
     }
 
 
+    //toString
     @Override
     public String toString() {
         return "Employee:" + super.toString();

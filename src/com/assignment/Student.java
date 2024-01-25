@@ -2,15 +2,18 @@ package com.assignment;
 public class Student extends Person{
     double gpa;
 
+    //constructor no-arg
     public Student() {
         super();
     }
 
+    //constructor 3 parameter
     public Student(String name, String surname, double gpa){
         super(name,surname);
         this.gpa=gpa;
     }
 
+    //getter and setter
     public double getGpa() {
         return gpa;
     }
@@ -20,6 +23,7 @@ public class Student extends Person{
     }
 
 
+    //toString
     @Override
     public String toString() {
         return "Student:" + super.toString();

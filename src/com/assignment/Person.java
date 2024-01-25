@@ -5,16 +5,19 @@ public abstract class Person implements Comparable<Person> {
     private String name;
     private String surname;
 
+    //constructor no-arg
     public Person(){
         id=id_gen++;
     }
 
+    //constructor with 2 parameter
     public Person(String name, String surname){
         this();
         setName(name);
         setSurname(surname);
     }
 
+    //getter and setter
     public int getId() {
         return id;
     }
@@ -37,6 +40,7 @@ public abstract class Person implements Comparable<Person> {
 
     public abstract String getPosition();
 
+    //toString
     @Override
     public String toString() {
         return id + "." + name + " " + surname;
