@@ -2,18 +2,18 @@ package com.assignment;
 public class Student extends Person{
     double gpa;
 
-    //constructor
+    //constructor default in subclass Student in which abstract class' constructor is called to set id
     public Student() {
         super();
     }
 
-    //constructor 3 parameter
+    //constructor 3 parameters in which abstract class' constructor is called to set name, surname, and mutate gpa
     public Student(String name, String surname, double gpa){
         super(name,surname);
         this.gpa=gpa;
     }
 
-    //getter and setter
+    //getter and setter of attribute gpa
     public double getGpa() {
         return gpa;
     }
@@ -23,11 +23,16 @@ public class Student extends Person{
     }
 
 
-    //toString
+    //toString is responsible for display the role of object and other attributes mentioned in abstract class by calling super()
     @Override
     public String toString() {
         return "Student:" + super.toString();
     }
+
+    /*
+    @getPayAmount returns constant scholarship or zero by the gpa
+    @gpa is an attribute of class Student which is used to allocate scholarship
+     */
 
     @Override
     public double getPaymentAmount() {
@@ -39,11 +44,18 @@ public class Student extends Person{
         }
     }
 
+    /*
+    @getPosition is a method that returns Student instead of job position
+     */
+
     @Override
     public String getPosition() {
         return "Student";
     }
 
+    /*
+    @compareTo compares two students by their income
+     */
     public int compareTo(Student otherStudent){
         return Double.compare(this.getPaymentAmount(), otherStudent.getPaymentAmount());
     }

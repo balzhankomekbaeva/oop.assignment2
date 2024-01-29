@@ -5,19 +5,19 @@ public abstract class Person implements Comparable<Person> {
     private String name;
     private String surname;
 
-    //constructor
+    //constructor default
     public Person(){
         id=id_gen++;
     }
 
-    //constructor with 2 parameter
+    //constructor with 2 parameter in which we call default constructor to set id
     public Person(String name, String surname){
         this();
         setName(name);
         setSurname(surname);
     }
 
-    //getter and setter
+    //getter and setter for each attribute
     public int getId() {
         return id;
     }
@@ -38,18 +38,26 @@ public abstract class Person implements Comparable<Person> {
         this.surname = surname;
     }
 
+    /*
+    @abstract getPosition is used for creating blueprints for the classes Employee and Student
+     */
     public abstract String getPosition();
 
-    //toString
+    //@toString method in Person class is used to return main information such as id, name, surname
     @Override
     public String toString() {
         return id + "." + name + " " + surname;
     }
 
+
     public double getPaymentAmount() {
         return 0.00;
     }
 
+    /*
+    @compareTo returns the highest income between two objects
+    @otherPerson is an object from class Person that was chosen to compare with certain object
+     */
     public int compareTo(Person otherPerson){
         return Double.compare(this.getPaymentAmount(), otherPerson.getPaymentAmount());
     }
